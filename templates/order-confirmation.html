@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation - Alisa</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f0f0f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f0f0f0;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+
+          <!-- Logo -->
+          <tr>
+            <td style="padding: 50px 50px 30px 50px; text-align: center;">
+              <span style="font-size: 28px; font-weight: 800; letter-spacing: 6px; color: #6c9b9a;">ALISA</span>
+            </td>
+          </tr>
+
+          <!-- Main Content -->
+          <tr>
+            <td style="padding: 20px 50px 50px 50px;">
+              <h1 style="margin: 0 0 25px 0; color: #1a1a1a; font-size: 26px; font-weight: 700;">Order Confirmation</h1>
+
+              <p style="margin: 0 0 20px 0; color: #4a4a4a; font-size: 16px; line-height: 1.7;">
+                Hi {{customer_name}},
+              </p>
+
+              <p style="margin: 0 0 30px 0; color: #4a4a4a; font-size: 16px; line-height: 1.7;">
+                Thank you for your order! We're pleased to confirm that we have received your order and it is being processed.
+              </p>
+
+              <!-- Order Info -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f7f7f7; border-radius: 8px; margin-bottom: 25px;">
+                <tr>
+                  <td style="padding: 20px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="padding: 5px 0; color: #888888; font-size: 14px;">Order Number</td>
+                        <td style="padding: 5px 0; color: #1a1a1a; font-size: 14px; font-weight: 600; text-align: right;">{{order_number}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 5px 0; color: #888888; font-size: 14px;">Order Date</td>
+                        <td style="padding: 5px 0; color: #1a1a1a; font-size: 14px; text-align: right;">{{order_date}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 5px 0; color: #888888; font-size: 14px;">Payment Method</td>
+                        <td style="padding: 5px 0; color: #1a1a1a; font-size: 14px; text-align: right;">{{payment_method}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Order Items -->
+              <p style="margin: 0 0 15px 0; color: #1a1a1a; font-size: 16px; font-weight: 600;">Items Ordered</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom: 20px;">
+                {{#each order_items}}
+                <tr>
+                  <td style="padding: 12px 0; color: #4a4a4a; font-size: 14px; border-bottom: 1px solid #eeeeee;">{{product_name}}</td>
+                  <td style="padding: 12px 0; color: #888888; font-size: 14px; text-align: center; border-bottom: 1px solid #eeeeee; width: 60px;">x{{quantity}}</td>
+                  <td style="padding: 12px 0; color: #1a1a1a; font-size: 14px; text-align: right; border-bottom: 1px solid #eeeeee; width: 100px;">{{price}}</td>
+                </tr>
+                {{/each}}
+                <tr>
+                  <td colspan="2" style="padding: 15px 0 0 0; color: #1a1a1a; font-size: 16px; font-weight: 600; text-align: right;">Total</td>
+                  <td style="padding: 15px 0 0 0; color: #6c9b9a; font-size: 18px; font-weight: 600; text-align: right;">{{order_total}}</td>
+                </tr>
+              </table>
+
+              <!-- Shipping Address -->
+              <p style="margin: 25px 0 10px 0; color: #1a1a1a; font-size: 16px; font-weight: 600;">Shipping Address</p>
+              <p style="margin: 0 0 25px 0; color: #4a4a4a; font-size: 14px; line-height: 1.6;">
+                {{shipping_name}}<br>
+                {{shipping_address}}<br>
+                {{shipping_postal_code}} {{shipping_city}}<br>
+                {{shipping_country}}
+              </p>
+
+              <!-- CTA Button -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin: 20px 0;">
+                <tr>
+                  <td align="center">
+                    <a href="{{order_tracking_url}}" style="display: inline-block; background-color: #6c9b9a; color: #ffffff; text-decoration: none; padding: 16px 50px; border-radius: 8px; font-size: 16px; font-weight: 500;">Track Your Order</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f7f7f7; padding: 35px 50px; border-top: 1px solid #e8e8e8;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td align="center" style="padding-bottom: 20px;">
+                    <p style="margin: 0; color: #4a4a4a; font-size: 14px;">
+                      Need help? Contact us at <a href="mailto:support@alisamed.com" style="color: #6c9b9a; text-decoration: none;">support@alisamed.com</a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom: 15px;">
+                    <p style="margin: 0 0 10px 0; color: #888888; font-size: 13px;">Follow us on social media</p>
+                    <p style="margin: 0;">
+                      <a href="https://instagram.com/alisa.medtech/" style="color: #6c9b9a; text-decoration: none; font-size: 14px;">Instagram</a>
+                      <span style="color: #cccccc; margin: 0 10px;">|</span>
+                      <a href="https://facebook.com/people/Alisa-MedTech/61573155397562/" style="color: #6c9b9a; text-decoration: none; font-size: 14px;">Facebook</a>
+                      <span style="color: #cccccc; margin: 0 10px;">|</span>
+                      <a href="https://linkedin.com/company/alisa-medtech" style="color: #6c9b9a; text-decoration: none; font-size: 14px;">LinkedIn</a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-top: 20px;">
+                    <p style="margin: 0 0 8px 0; color: #888888; font-size: 12px;">&copy; 2026 Alisa Medtech AB. All rights reserved.</p>
+                    <p style="margin: 0; color: #aaaaaa; font-size: 12px;">You are receiving this email because you placed an order with Alisa.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
