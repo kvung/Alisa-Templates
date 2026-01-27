@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>We've Received Your Message - Alisa</title>
+    <title>New Article Number Request - Alisa</title>
   </head>
   <body
     style="
@@ -64,19 +64,8 @@
                     font-weight: 700;
                   "
                 >
-                  Thank You for Contacting Us
+                  New Article Number Request
                 </h1>
-
-                <p
-                  style="
-                    margin: 0 0 20px 0;
-                    color: #4a4a4a;
-                    font-size: 16px;
-                    line-height: 1.7;
-                  "
-                >
-                  Hi {{customer_name}},
-                </p>
 
                 <p
                   style="
@@ -86,12 +75,128 @@
                     line-height: 1.7;
                   "
                 >
-                  We've received your message and want to thank you for reaching
-                  out. Our team will review your inquiry and get back to you as
-                  soon as possible.
+                  A new article number has been requested to be added to the
+                  database. Please review the details below and take the
+                  appropriate action.
                 </p>
 
-                <!-- Message Summary -->
+                <!-- Article Details -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  style="
+                    background-color: #f7f7f7;
+                    border-radius: 8px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 20px">
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Product Name
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              font-weight: 600;
+                              text-align: right;
+                            "
+                          >
+                            {{product_name}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Manufacturer
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{manufacturer}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Article Number
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{article_number}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Product URL
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            <a
+                              href="{{product_url}}"
+                              style="color: #6c9b9a; text-decoration: none"
+                              >{{product_url}}</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Contact Details -->
                 <p
                   style="
                     margin: 0 0 15px 0;
@@ -100,7 +205,7 @@
                     font-weight: 600;
                   "
                 >
-                  Your Message
+                  Contact Details
                 </p>
                 <table
                   role="presentation"
@@ -129,19 +234,19 @@
                               padding: 5px 0;
                               color: #888888;
                               font-size: 14px;
-                              width: 100px;
                             "
                           >
-                            Subject
+                            Contact Person
                           </td>
                           <td
                             style="
                               padding: 5px 0;
                               color: #1a1a1a;
                               font-size: 14px;
+                              text-align: right;
                             "
                           >
-                            {{message_subject}}
+                            {{contact_person}}
                           </td>
                         </tr>
                         <tr>
@@ -152,36 +257,17 @@
                               font-size: 14px;
                             "
                           >
-                            Category
+                            Email
                           </td>
                           <td
                             style="
                               padding: 5px 0;
                               color: #1a1a1a;
                               font-size: 14px;
+                              text-align: right;
                             "
                           >
-                            {{message_category}}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            style="
-                              padding: 5px 0;
-                              color: #888888;
-                              font-size: 14px;
-                            "
-                          >
-                            Submitted
-                          </td>
-                          <td
-                            style="
-                              padding: 5px 0;
-                              color: #1a1a1a;
-                              font-size: 14px;
-                            "
-                          >
-                            {{submission_date}}
+                            {{contact_email}}
                           </td>
                         </tr>
                       </table>
@@ -209,51 +295,9 @@
                             line-height: 1.6;
                           "
                         >
-                          {{message_content}}
+                          {{message}}
                         </p>
                       </div>
-                    </td>
-                  </tr>
-                </table>
-
-                <p
-                  style="
-                    margin: 0 0 25px 0;
-                    color: #888888;
-                    font-size: 14px;
-                    line-height: 1.6;
-                  "
-                >
-                  We typically respond within {{response_time}} business days.
-                  If you need to add any information, simply reply to this email
-                  with your reference number.
-                </p>
-
-                <!-- CTA Button -->
-                <table
-                  role="presentation"
-                  width="100%"
-                  cellspacing="0"
-                  cellpadding="0"
-                  border="0"
-                  style="margin: 20px 0"
-                >
-                  <tr>
-                    <td align="center">
-                      <a
-                        href="https://www.alisamed.se"
-                        style="
-                          display: inline-block;
-                          background-color: #6c9b9a;
-                          color: #ffffff;
-                          text-decoration: none;
-                          padding: 16px 50px;
-                          border-radius: 8px;
-                          font-size: 16px;
-                          font-weight: 500;
-                        "
-                        >Visit Our Website</a
-                      >
                     </td>
                   </tr>
                 </table>
@@ -344,8 +388,8 @@
                         &copy; 2026 Alisa Medtech AB. All rights reserved.
                       </p>
                       <p style="margin: 0; color: #aaaaaa; font-size: 12px">
-                        You are receiving this email because you submitted a
-                        contact form on our website.
+                        You are receiving this email because you are an
+                        administrator for article management.
                       </p>
                     </td>
                   </tr>

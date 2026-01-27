@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>We've Received Your Message - Alisa</title>
+    <title>Device Shared With You - Alisa</title>
   </head>
   <body
     style="
@@ -64,19 +64,8 @@
                     font-weight: 700;
                   "
                 >
-                  Thank You for Contacting Us
+                  A Device Has Been Shared With You
                 </h1>
-
-                <p
-                  style="
-                    margin: 0 0 20px 0;
-                    color: #4a4a4a;
-                    font-size: 16px;
-                    line-height: 1.7;
-                  "
-                >
-                  Hi {{customer_name}},
-                </p>
 
                 <p
                   style="
@@ -86,12 +75,207 @@
                     line-height: 1.7;
                   "
                 >
-                  We've received your message and want to thank you for reaching
-                  out. Our team will review your inquiry and get back to you as
-                  soon as possible.
+                  {{sharer_name}} has shared a device with you on Alisa.
                 </p>
 
-                <!-- Message Summary -->
+                <!-- Device Info -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  style="
+                    background-color: #f7f7f7;
+                    border-radius: 8px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 20px">
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Unit
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{unit}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Municipality
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{municipality}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Case
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{case_reference}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Product
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              font-weight: 600;
+                              text-align: right;
+                            "
+                          >
+                            {{product}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Rented or Owned?
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{ownership_status}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            ALISA ID
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              font-weight: 600;
+                              text-align: right;
+                            "
+                          >
+                            {{alisa_id}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Serial Number
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{serial_number}}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #888888;
+                              font-size: 14px;
+                            "
+                          >
+                            Location
+                          </td>
+                          <td
+                            style="
+                              padding: 5px 0;
+                              color: #1a1a1a;
+                              font-size: 14px;
+                              text-align: right;
+                            "
+                          >
+                            {{location}}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Contact Info -->
                 <p
                   style="
                     margin: 0 0 15px 0;
@@ -100,7 +284,7 @@
                     font-weight: 600;
                   "
                 >
-                  Your Message
+                  Contact Details
                 </p>
                 <table
                   role="presentation"
@@ -129,19 +313,19 @@
                               padding: 5px 0;
                               color: #888888;
                               font-size: 14px;
-                              width: 100px;
                             "
                           >
-                            Subject
+                            Contact Person
                           </td>
                           <td
                             style="
                               padding: 5px 0;
                               color: #1a1a1a;
                               font-size: 14px;
+                              text-align: right;
                             "
                           >
-                            {{message_subject}}
+                            {{contact_person}}
                           </td>
                         </tr>
                         <tr>
@@ -152,36 +336,17 @@
                               font-size: 14px;
                             "
                           >
-                            Category
+                            Email
                           </td>
                           <td
                             style="
                               padding: 5px 0;
                               color: #1a1a1a;
                               font-size: 14px;
+                              text-align: right;
                             "
                           >
-                            {{message_category}}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            style="
-                              padding: 5px 0;
-                              color: #888888;
-                              font-size: 14px;
-                            "
-                          >
-                            Submitted
-                          </td>
-                          <td
-                            style="
-                              padding: 5px 0;
-                              color: #1a1a1a;
-                              font-size: 14px;
-                            "
-                          >
-                            {{submission_date}}
+                            {{contact_email}}
                           </td>
                         </tr>
                       </table>
@@ -209,25 +374,12 @@
                             line-height: 1.6;
                           "
                         >
-                          {{message_content}}
+                          {{message}}
                         </p>
                       </div>
                     </td>
                   </tr>
                 </table>
-
-                <p
-                  style="
-                    margin: 0 0 25px 0;
-                    color: #888888;
-                    font-size: 14px;
-                    line-height: 1.6;
-                  "
-                >
-                  We typically respond within {{response_time}} business days.
-                  If you need to add any information, simply reply to this email
-                  with your reference number.
-                </p>
 
                 <!-- CTA Button -->
                 <table
@@ -236,12 +388,12 @@
                   cellspacing="0"
                   cellpadding="0"
                   border="0"
-                  style="margin: 20px 0"
+                  style="margin: 20px 0 30px 0"
                 >
                   <tr>
                     <td align="center">
                       <a
-                        href="https://www.alisamed.se"
+                        href="{{device_url}}"
                         style="
                           display: inline-block;
                           background-color: #6c9b9a;
@@ -252,11 +404,23 @@
                           font-size: 16px;
                           font-weight: 500;
                         "
-                        >Visit Our Website</a
+                        >View Device</a
                       >
                     </td>
                   </tr>
                 </table>
+
+                <p
+                  style="
+                    margin: 0;
+                    color: #888888;
+                    font-size: 14px;
+                    line-height: 1.6;
+                  "
+                >
+                  If you believe this was shared with you by mistake, please
+                  contact {{sharer_name}} or our support team.
+                </p>
               </td>
             </tr>
 
@@ -344,8 +508,8 @@
                         &copy; 2026 Alisa Medtech AB. All rights reserved.
                       </p>
                       <p style="margin: 0; color: #aaaaaa; font-size: 12px">
-                        You are receiving this email because you submitted a
-                        contact form on our website.
+                        You are receiving this email because a device was shared
+                        with your account.
                       </p>
                     </td>
                   </tr>
