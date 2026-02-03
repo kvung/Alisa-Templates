@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expiry Notification - Alisa</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif;
+    "
+  >
+    <table
+      role="presentation"
+      width="100%"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      style="background-color: #f0f0f0"
+    >
+      <tr>
+        <td align="center" style="padding: 40px 20px">
+          <table
+            role="presentation"
+            width="600"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            style="
+              background-color: #ffffff;
+              border-radius: 12px;
+              overflow: hidden;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            "
+          >
+            <!-- Logo -->
+            <tr>
+              <td style="padding: 50px 50px 30px 50px; text-align: center">
+                <span
+                  style="
+                    font-size: 28px;
+                    font-weight: 800;
+                    letter-spacing: 6px;
+                    color: #6c9b9a;
+                  "
+                  >ALISA</span
+                >
+              </td>
+            </tr>
+
+            <!-- Main Content -->
+            <tr>
+              <td style="padding: 20px 50px 50px 50px">
+                <h1
+                  style="
+                    margin: 0 0 25px 0;
+                    color: #1a1a1a;
+                    font-size: 26px;
+                    font-weight: 700;
+                  "
+                >
+                  Expiry Notification
+                </h1>
+
+                <p
+                  style="
+                    margin: 0 0 30px 0;
+                    color: #4a4a4a;
+                    font-size: 16px;
+                    line-height: 1.7;
+                  "
+                >
+                  The following items are approaching their expiry date. Please review and take the necessary action.
+                </p>
+
+                <!-- Summary -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  style="
+                    background-color: #fff8e6;
+                    border-radius: 8px;
+                    border-left: 4px solid #f0a500;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 15px 20px">
+                      <p
+                        style="
+                          margin: 0;
+                          color: #856404;
+                          font-size: 14px;
+                        "
+                      >
+                        <strong>{{items_count}}</strong> item(s) expiring within the next <strong>{{days_threshold}}</strong> days
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Items Table -->
+                <p
+                  style="
+                    margin: 0 0 15px 0;
+                    color: #1a1a1a;
+                    font-size: 16px;
+                    font-weight: 600;
+                  "
+                >
+                  Items Expiring Soon
+                </p>
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  style="
+                    background-color: #f7f7f7;
+                    border-radius: 8px;
+                    margin-bottom: 25px;
+                  "
+                >
+                  <tr>
+                    <td style="padding: 5px">
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        style="background-color: #ffffff; border-radius: 6px;"
+                      >
+                        <!-- Table Header -->
+                        <tr>
+                          <td
+                            style="
+                              padding: 12px 15px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                            "
+                          >
+                            Product
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                            "
+                          >
+                            Category
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                            "
+                          >
+                            Location
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                            "
+                          >
+                            Storage
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                              text-align: center;
+                            "
+                          >
+                            Expiry
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 15px;
+                              color: #888888;
+                              font-size: 12px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                              border-bottom: 2px solid #e8e8e8;
+                              text-align: right;
+                            "
+                          >
+                            Amount
+                          </td>
+                        </tr>
+                        <!-- Table Rows -->
+                        {{#each items}}
+                        <tr>
+                          <td
+                            style="
+                              padding: 12px 15px;
+                              color: #1a1a1a;
+                              font-size: 13px;
+                              font-weight: 600;
+                              border-bottom: 1px solid #f0f0f0;
+                            "
+                          >
+                            {{product}}
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #4a4a4a;
+                              font-size: 13px;
+                              border-bottom: 1px solid #f0f0f0;
+                            "
+                          >
+                            {{category}}
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #4a4a4a;
+                              font-size: 13px;
+                              border-bottom: 1px solid #f0f0f0;
+                            "
+                          >
+                            {{location}}
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #4a4a4a;
+                              font-size: 13px;
+                              border-bottom: 1px solid #f0f0f0;
+                            "
+                          >
+                            {{storage}}
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 10px;
+                              color: #c0392b;
+                              font-size: 13px;
+                              font-weight: 600;
+                              border-bottom: 1px solid #f0f0f0;
+                              text-align: center;
+                            "
+                          >
+                            {{expiry}}
+                          </td>
+                          <td
+                            style="
+                              padding: 12px 15px;
+                              color: #1a1a1a;
+                              font-size: 13px;
+                              border-bottom: 1px solid #f0f0f0;
+                              text-align: right;
+                            "
+                          >
+                            {{amount}}
+                          </td>
+                        </tr>
+                        {{/each}}
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- CTA Button -->
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  style="margin: 20px 0 30px 0"
+                >
+                  <tr>
+                    <td align="center">
+                      <a
+                        href="{{inventory_url}}"
+                        style="
+                          display: inline-block;
+                          background-color: #6c9b9a;
+                          color: #ffffff;
+                          text-decoration: none;
+                          padding: 16px 50px;
+                          border-radius: 8px;
+                          font-size: 16px;
+                          font-weight: 500;
+                        "
+                        >View Inventory</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+
+                <p
+                  style="
+                    margin: 0;
+                    color: #888888;
+                    font-size: 14px;
+                    line-height: 1.6;
+                  "
+                >
+                  Please ensure expired items are disposed of properly and restock as needed.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td
+                style="
+                  background-color: #f7f7f7;
+                  padding: 35px 50px;
+                  border-top: 1px solid #e8e8e8;
+                "
+              >
+                <table
+                  role="presentation"
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                >
+                  <tr>
+                    <td align="center" style="padding-bottom: 20px">
+                      <p style="margin: 0; color: #4a4a4a; font-size: 14px">
+                        Need help? Contact us at
+                        <a
+                          href="mailto:support@alisamed.com"
+                          style="color: #6c9b9a; text-decoration: none"
+                          >support@alisamed.com</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-bottom: 15px">
+                      <p
+                        style="
+                          margin: 0 0 10px 0;
+                          color: #888888;
+                          font-size: 13px;
+                        "
+                      >
+                        Follow us on social media
+                      </p>
+                      <p style="margin: 0">
+                        <a
+                          href="https://instagram.com/alisa.medtech/"
+                          style="
+                            color: #6c9b9a;
+                            text-decoration: none;
+                            font-size: 14px;
+                          "
+                          >Instagram</a
+                        >
+                        <span style="color: #cccccc; margin: 0 10px">|</span>
+                        <a
+                          href="https://facebook.com/people/Alisa-MedTech/61573155397562/"
+                          style="
+                            color: #6c9b9a;
+                            text-decoration: none;
+                            font-size: 14px;
+                          "
+                          >Facebook</a
+                        >
+                        <span style="color: #cccccc; margin: 0 10px">|</span>
+                        <a
+                          href="https://linkedin.com/company/alisa-medtech"
+                          style="
+                            color: #6c9b9a;
+                            text-decoration: none;
+                            font-size: 14px;
+                          "
+                          >LinkedIn</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding-top: 20px">
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          color: #888888;
+                          font-size: 12px;
+                        "
+                      >
+                        &copy; 2026 Alisa Medtech AB. All rights reserved.
+                      </p>
+                      <p style="margin: 0; color: #aaaaaa; font-size: 12px">
+                        This is an automated expiry notification from Alisa.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

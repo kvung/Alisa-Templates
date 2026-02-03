@@ -14,6 +14,8 @@ Standardised email templates for Alisa Medtech AB.
 | Contact Form Notification | `templates/contact-form-notification.html` | Sent to internal team when contact form is submitted |
 | Device Shared             | `templates/device-shared.html`             | Sent when a device is shared with a user             |
 | New Article Request       | `templates/new-article-request.html`       | Sent when requesting a new article number            |
+| Expiry Notification       | `templates/expiry-notification.html`       | Sent when items are approaching expiry date          |
+| Expiry Notification (SV)  | `templates/expiry-notification-sv.html`    | Utgångsavisering (Swedish version)                   |
 
 ## Template Variables
 
@@ -105,6 +107,41 @@ Standardised email templates for Alisa Medtech AB.
 | `{{contact_person}}` | Contact person name         |
 | `{{contact_email}}`  | Contact email               |
 | `{{message}}`        | Additional message          |
+
+### Expiry Notification
+
+| Variable             | Description                                    |
+| -------------------- | ---------------------------------------------- |
+| `{{items_count}}`    | Number of items expiring                       |
+| `{{days_threshold}}` | Days threshold for expiry warning              |
+| `{{items}}`          | Array of expiring items (use `{{#each}}`)      |
+| `{{items.product}}`  | Product name                                   |
+| `{{items.category}}` | Product category                               |
+| `{{items.location}}` | Location address                               |
+| `{{items.storage}}`  | Storage area                                   |
+| `{{items.expiry}}`   | Expiry date                                    |
+| `{{items.amount}}`   | Quantity/amount                                |
+| `{{inventory_url}}`  | URL to view inventory                          |
+
+### Expiry Notification (Swedish)
+
+Uses C# string interpolation format for backend integration.
+
+**Main template** (`expiry-notification-sv.html`):
+| Variable       | Description                                           |
+| -------------- | ----------------------------------------------------- |
+| `{unitName}`   | Unit/organization name                                |
+| `{TableRows}`  | Placeholder for generated row HTML                    |
+
+**Row template** (`expiry-notification-sv-row.html`):
+| Variable         | Description                                         |
+| ---------------- | --------------------------------------------------- |
+| `{ProductName}`  | Product name (from `r.ProductName`)                 |
+| `{CategoryName}` | Category name (from `r.CategoryName`)               |
+| `{LocationName}` | Location name (from `r.LocationName`)               |
+| `{StorageName}`  | Storage name (from `r.StorageName`)                 |
+| `{ExpiryDateUtc}`| Expiry date (from `r.ExpiryDateUtc`, format yyyy-MM-dd) |
+| `{Amount}`       | Amount (from `r.Amount`)                            |
 
 ## Branding
 
